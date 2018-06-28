@@ -15,6 +15,13 @@ define(
             className: 'AknTitleContainer-title',
 
             /**
+             * @param {Object} meta
+             */
+            initialize: function (meta) {
+                this.config = _.extend({}, meta.config);
+            },
+
+            /**
              * {@inheritdoc}
              */
             configure: function () {
@@ -42,8 +49,10 @@ define(
              * @return {String}
              */
             getLabel: function () {
-                var data = this.getFormData();
-
+                const data = this.getFormData();
+                if (this.config.field) {
+                    return data[this.config.field];
+                }
                 return i18n.getLabel(
                     data.labels,
                     UserContext.get('catalogLocale'),
