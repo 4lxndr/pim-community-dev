@@ -84,7 +84,7 @@ define(
 
                         this.$el.html(this.template({
                             i18n: i18n,
-                            locale: UserContext.get('uiLocale'),
+                            locale: UserContext.get('user_default_locale'),
                             trees: trees,
                             currentTree: _.findWhere(trees, {code: this.currentTree}),
                             selectedCategories: this.selectedCategories

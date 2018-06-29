@@ -73,7 +73,7 @@ define(
                                 i18n: i18n,
                                 channels: channels,
                                 locales: locales,
-                                catalogLocale: UserContext.get('catalogLocale'),
+                                catalogLocale: UserContext.get('catalog_default_locale'),
                                 hasFamilyChanged: this.getFormData().family !== this.initialFamily,
                                 missingValuesKey: 'pim_enrich.form.product.panel.completeness.missing_values',
                                 noFamilyLabel: __('pim_enrich.form.product.panel.completeness.info.no_family'),
@@ -99,7 +99,7 @@ define(
                 if (_.isEmpty(completenesses)) {
                     return [];
                 }
-                var sortedCompleteness = [_.findWhere(completenesses, {channel: UserContext.get('catalogScope')})];
+                var sortedCompleteness = [_.findWhere(completenesses, {channel: UserContext.get('catalog_default_scope')})];
 
                 return _.union(sortedCompleteness, completenesses);
             },

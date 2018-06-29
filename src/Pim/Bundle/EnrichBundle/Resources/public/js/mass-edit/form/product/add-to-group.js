@@ -54,7 +54,7 @@ define(
                         groups: groups,
                         i18n: i18n,
                         readOnly: this.readOnly,
-                        locale: UserContext.get('uiLocale'),
+                        locale: UserContext.get('user_default_locale'),
                         label: __('pim_enrich.mass_edit.product.operation.add_to_group.field')
                     }));
                 }.bind(this));
