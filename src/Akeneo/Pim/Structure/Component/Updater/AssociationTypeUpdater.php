@@ -1,6 +1,6 @@
 <?php
 
-namespace Pim\Component\Catalog\Updater;
+namespace Akeneo\Pim\Structure\Component\Updater;
 
 use Akeneo\Tool\Component\Localization\TranslatableUpdater;
 use Akeneo\Tool\Component\StorageUtils\Exception\InvalidObjectException;
